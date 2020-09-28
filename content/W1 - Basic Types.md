@@ -150,6 +150,11 @@ if (typeof maybe === "string") {
   const aBoolean: boolean = maybe;
 }
 ```
+- Unknown과 다른 타입의 합집합 & 교집합. 
+```ts
+type unknownType = unknown | string // unknown
+type stringType = unknown & string  // string
+```
 
 ## Any
 
@@ -170,7 +175,7 @@ const str: string = getValue("myString");
 
 `any` 타입의 경우 `unknown` 타입과 다르게 임의의 프로퍼티에 접근할 수 있도록 한다.
 
-- `any` 타입은 꼭 필요한 경우에만 사용하도록 하며 **Type safety를 해치는 것을 잊으면 안된다**.
+- `any` 타입은 꼭 필요한 경우에만 사용하도록 하며 **Type safety를 해친다는 것을 잊으면 안된다**.  
 
 ```ts
 let looselyTyped: any = 4;
