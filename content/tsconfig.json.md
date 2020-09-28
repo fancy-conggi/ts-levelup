@@ -2,10 +2,7 @@
 
 > 시작전에 궁금했던 것
 
-- tsconfig.js 누가 감지하고 컴파일하는가?
-- build된 파일은 어디로 가는가?
-
-
+- tsconfig.js 컴파일 과정 ?
 
 ## tsconfig.json
 
@@ -155,6 +152,8 @@ typeRoots를 지정하면 typeRoots 아래에 있는 패키지만 포함
 
 생략
 
+
+
 ### extends
 
 - extends는 최상위 속성에 포함 (상속하려는 파일의 경로를 포함하는 문자열)
@@ -192,16 +191,4 @@ tsconfig.json
 ```
 
 
-
-### [compilerOptions](https://vomvoru.github.io/blog/tsconfig-compiler-options-kr/)
-
-- target - 사용할 특정 ECMAScript 버전 (ES3[default], ES5, ES2015, ES2016, ..., ES2020, ESNEXT)
-
-- lib - 컴파일에 포함할 라이브러리 파일 목록
-
-- allowJs, checkJs
-
-- tsBuildInfoFile
-
-  
 
