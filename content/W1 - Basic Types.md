@@ -100,6 +100,17 @@ var EnumOne;
     EnumOne[EnumOne["ThirdIndex"] = 2] = "ThirdIndex"; // 2
 })(EnumOne || (EnumOne = {}));
 
+/**
+EnumOne = {
+	0: "FirstIndex",
+	1: "SecondIndex",
+	2: "ThirdIndex",
+	FirstIndex: 0,
+	SecondIndex: 1,
+	ThirdIndex: 2
+}
+*/
+
 // 문자열 열거형은 String indexed
 var Direction;
 (function (Direction) {
