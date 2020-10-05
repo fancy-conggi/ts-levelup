@@ -2,7 +2,9 @@
 
 > 시작전에 궁금했던 것
 
-- tsconfig.js 컴파일 과정 ?
+- `tsconfig.js 컴파일 과정 ?`
+
+
 
 ## tsconfig.json
 
@@ -10,11 +12,13 @@
 
 
 
+npm install -g typescript
+
 `tsc` 명령어로 타입스크립트를 자바스크립트로 컴파일
 
 
 
-npm으로 typescript 설치과정 생략
+xnpm으로 typescript 설치과정 생략
 
 설치후에 버전확인
 
@@ -43,6 +47,10 @@ tsc app.ts # tsconfig.json 무시
 tsconfig.json 파일이 있다면 프로젝트의 root가 됨
 
 `--project (-p)` 옵션을 사용 가능 > 입력파일을 지정하면 tsconfig.json 파일 무시
+
+```
+tsc -p ./base.json
+```
 
 
 
@@ -78,7 +86,9 @@ tsconfig.json 파일이 있다면 프로젝트의 root가 됨
     "exclude": [
         "node_modules",
         "**/*.spec.ts"
-    ]
+    ],
+    "typeRootss" : [],
+    "types" : []
 }
 ```
 
@@ -92,7 +102,11 @@ tsconfig.json 파일이 있다면 프로젝트의 root가 됨
 
 ### typeRoots, types (@types)
 
-#### @types
+
+
+#### @types 
+
+빌드 & 명세를 위한 의존성 모듈
 
 대표적인 예로 `@types/classnames`, `@types/react`가 있음
 
@@ -105,7 +119,6 @@ tsconfig.json 파일이 있다면 프로젝트의 root가 됨
 > 자세히 알아보기 전에.. `@types`는 어떻게 동작하는가 ?
 
 - [d.ts 파일은 무엇인가?](https://www.slideshare.net/gloridea/dts-74589285) 
-
   - 타입스크립트 코드의 타입 추론을 돕는 파일 (react, jquery등등도 타입으로 정의가 되어 있어야 사용이 가능)
 
   - 프로젝트 내에 .d.ts 선언 > 없는 모듈의 @types를 만들어 npm에 올리면 좋지만, 필요한 부분만 만들어서 사용할 때
@@ -132,7 +145,7 @@ tsconfig.json 파일이 있다면 프로젝트의 root가 됨
 
 typeRoots를 지정하면 typeRoots 아래에 있는 패키지만 포함
 
-이 설정파일에 따르면 ./typings의 모든 패키지가 포하되며 node_modules/@types는 포함되지 않음
+이 설정파일에 따르면 ./typings의 모든 패키지가 포함되며 node_modules/@types는 포함되지 않음
 
 ```json
 {
@@ -173,6 +186,20 @@ type를 지정하면 @types 패키지가 자동으로 포함되지 않음
 
 
 
+tsconfig.json
+
+```json
+{
+  "extends": "./configs/base",
+  "files": [
+    "main.ts",
+    "supplemental.ts"
+  ]
+}
+```
+
+
+
 /config/base.json
 
 ```json
@@ -185,20 +212,6 @@ type를 지정하면 @types 패키지가 자동으로 포함되지 않음
 ```
 
 
-
-
-
-tsconfig.json
-
-```json
-{
-  "extends": "./configs/base",
-  "files": [
-    "main.ts",
-    "supplemental.ts"
-  ]
-}
-```
 
 
 
