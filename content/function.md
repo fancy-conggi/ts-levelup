@@ -87,8 +87,6 @@ let myAdd: (baseValue: number, increment: number) => number = function (x, y) { 
 
 죽, 함수에 주어진 인자의 수는 함수가 기대하는 매개변수의 수와 일치해야 함
 
-
-
 ```typescript 
 function buildName(firstName: string, lastName: string) {
     return firstName + " " + lastName;
@@ -204,7 +202,7 @@ let employeeName = buildName("Joseph", "Samuel", "Lucas", "MacKinzie");
 
 나머지 매개변수는 선택적 매개변수들의 수를 무한으로 취급
 
-나머지 매개변수로 인자들을 넘겨줄 때 원하는 만큼 넘겨줄 수도 또는 아무것도 넘기지 않을 수도 있음
+<u>나머지 매개변수로 인자들을 넘겨줄 때 원하는 만큼 넘겨줄 수도 또는 아무것도 넘기지 않을 수도 있음</u>
 
 
 
@@ -269,7 +267,7 @@ let deck = {
     suits: ["hearts", "spades", "clubs", "diamonds"],
     cards: Array(52),
     createCardPicker: function() {
-        // NOTE: 아랫줄은 화살표 함수로써, 'this'를 이곳에서 캡처할 수 있도록 합니다
+        // NOTE: 아랫줄은 화살표 함수로써, 'this'(any)를 이곳에서 캡처할 수 있도록 합니다
         return () => {
             let pickedCard = Math.floor(Math.random() * 52);
             let pickedSuit = Math.floor(pickedCard / 13);
@@ -434,7 +432,7 @@ class Handler {
 
 - method의 이름은 같지만 매개변수의 개수는 동일하게 type은 다르게 정의하여 사용하는 방법
 - 다른 언어의 Overloading 개념은 method명만 같으면 되지만 
-  typescript는 Overloading을 사용하기 위해서는 함수명과 매개변수의 개수가 같아야 합니다.
+  typescript는 Overloading을 사용하기 위해서는 함수명과 <u>매개변수의 개수가 같아야 합니다.</u>
 
 ```ts
 function pickCard(x: {suit: string; card: number; }[]): number;
