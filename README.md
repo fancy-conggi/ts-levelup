@@ -10,7 +10,7 @@
 - 핸드북 (4W1M)
   - 1W > [기본타입](https://github.com/fancy-conggi/ts-levelup/blob/master/content/W1%20-%20Basic%20Types.md), [인터페이스](https://github.com/fancy-conggi/ts-levelup/blob/master/content/W1%20-%20Interface.md) > 오세준
   - 2W > [유니언과 교차 타입](https://github.com/fancy-conggi/ts-levelup/blob/master/content/W2%20-%20Union%20%26%20Intersection.md), [클래스](https://github.com/fancy-conggi/ts-levelup/blob/master/content/W2%20-%20Class.md) > 오세준
-  - 3W >
+  - 3W > [Enums](https://github.com/fancy-conggi/ts-levelup/blob/master/content/W3%20-%20Enums.md) > 오세준
   - 4W >
 - 핸드북 레퍼런스 (17W1M)
   - 1W >
