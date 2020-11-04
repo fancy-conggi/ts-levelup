@@ -59,9 +59,9 @@ let output = identity<string>("myString"); // 출력 타입은 'string'입니다
 
 `"myString"`를 보고 그것의 타입으로 `T`를 정함
 
-인수 추론은 코드를 간결하고 가독성있게 하지만 
+<u>인수 추론은 코드를 간결하고 가독성있게 하지만</u> 
 
-복잡한 예제에서 컴파일러가 타입을 유추할 수 없는 경우에 명시적인 타입 인수 전달이 필요할 수도 ..
+<u>복잡한 예제에서 컴파일러가 타입을 유추할 수 없는 경우에 명시적인 타입 인수 전달이 필요할 수도 ..</u>
 
 ```ts
 let output = identity("myString"); //출력 타입은 'string'입니다.
@@ -109,7 +109,7 @@ function identity<T>(arg: T): T {
 
 let myIdentity_A: <T>(arg: T) => T = identity;
 
-// 제네릭 타입을 객체 리터럴 타입의 함수 호출 시그니처로 작성하는 병우
+// 제네릭 타입을 객체 리터럴 타입의 함수 호출 시그니처로 작성하는 경우
 let myIdentity_B: { <T>(arg: T): T } = identity;
 ```
 
@@ -203,6 +203,8 @@ loggingIdentity({length: 10, value: 3});
 
 ### 제약조건2. keyof
 
+<u>keyof는 모든 프로퍼티의 타입을 union으로 리턴 받음</u>
+
 이름이 있는 객체에서 프로퍼티를 가져오고 싶은 경우
 
 `keyof x`는 사실상 `a | b | c | d`와 같습니다. 
@@ -227,9 +229,6 @@ getProperty(x, "m"); // 오류: 인수의 타입 'm' 은 'a' | 'b' | 'c' | 'd'�
 interface Map<T> {
     [key: string]: T;
 }
-let keys: keyof Map<number>; // string
+let keys: keyof Map<number>; // string | number
 let value: Map<number>['foo']; // number
 ````
-
-
-
