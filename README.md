@@ -18,7 +18,7 @@
     - [선언 병합](https://github.com/fancy-conggi/ts-levelup/blob/master/content/W4%20-%20Declaration%20merging.md) > 오세준
   - 2W >
     - Decorator > 허정문
-    - 유틸리티타입 > 오세준
+    - [유틸리티타입](https://github.com/fancy-conggi/ts-levelup/blob/master/content/W5%20-%20Utility%20type.md) > 오세준
   - 3W >
   - 4W >
   - ...
