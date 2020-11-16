@@ -20,6 +20,8 @@
     - Decorator > 허정문
     - [유틸리티타입](https://github.com/fancy-conggi/ts-levelup/blob/master/content/W5%20-%20Utility%20type.md) > 오세준
   - 3W >
+    - Namespace > 허정문
+    - JSX, Mixin > 오세준
   - 4W >
   - ...
 - 선언파일 (미정)
